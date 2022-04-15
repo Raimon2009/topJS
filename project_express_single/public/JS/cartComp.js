@@ -51,7 +51,7 @@ Vue.component('cart', {
             </div>     
             <div v-show="showCart">
                 <p class="emptyBasket" v-if="!cartItems.length">Корзина пуста</p>
-                <basket-up ref="basket-up"  v-for="item of cartItems" :key="item.id_product"></basket-up>
+                <basket-up ref="basket-up"  v-for="item of cartItems" :key="item.id_product" :cartItem="item"></basket-up>
             </div> 
         </div>  
         `

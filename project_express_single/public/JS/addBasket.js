@@ -1,5 +1,5 @@
 
-Vue.conponent('add-basket', {
+Vue.component('add-basket', {
     props: ['cartItem'],
     template: `
     <div>
