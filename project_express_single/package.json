@@ -1,14 +1,22 @@
 {
-  "name": "project_express",
+  "name": "finalproject",
   "version": "1.0.0",
-  "description": "",
+  "description": "final project top JS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raimon2009/topJS.git"
+  },
+  "author": "Alex Davydov",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raimon2009/topJS/issues"
+  },
+  "homepage": "https://github.com/Raimon2009/topJS#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
