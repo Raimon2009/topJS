@@ -546,9 +546,6 @@
 .category__item:hover {
   transform: scale(1.5);
 }
-.category__item:hover:last-child {
-  transform: rotate(360deg);
-}
 
 .for__women {
   background: url(../img/for_women.jpg) no-repeat;

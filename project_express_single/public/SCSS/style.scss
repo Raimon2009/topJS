@@ -585,14 +585,10 @@ $mainColor: pink;
     height: 180px;
     align-items: center;
     @include position();
-    // transition: all 5s;
+    transition: all 5s;
 
     &:hover {
         transform: scale(1.5);
-    }
-
-    &:hover:last-child {
-        transform: rotate(360deg);
     }
 }
 
