@@ -25,20 +25,21 @@ Vue.component('cart', {
                     }
                 })
         },
-        remove(item) {
-            this.$parent.getJson(`${API}/deleteFromBasket.json`)
-                .then(data => {
-                    if (data.result === 1) {
-                        if (item.quantity > 1) {
-                            item.quantity--;
-                            this.counter--;
-                        } else {
-                            this.cartItems.splice(this.cartItems.indexOf(item), 1);
-                            this.counter--;
-                        }
-                    }
-                })
-        },
+        // используем удаление из корзины со страницы card в другом компоненте
+        // remove(item) {
+        //     this.$parent.getJson(`${API}/deleteFromBasket.json`)
+        //         .then(data => {
+        //             if (data.result === 1) {
+        //                 if (item.quantity > 1) {
+        //                     item.quantity--;
+        //                     this.counter--;
+        //                 } else {
+        //                     this.cartItems.splice(this.cartItems.indexOf(item), 1);
+        //                     this.counter--;
+        //                 }
+        //             }
+        //         })
+        // },
     },
     template: ` 
         <div>   
