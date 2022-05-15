@@ -78,7 +78,7 @@ $mainColor: pink;
 
 .search__field {
     box-sizing: border-box;
-    width: 200px;
+    max-width: 200px;
     color: #fafafa;
     background-color: transparent;
     border: none;
@@ -109,8 +109,6 @@ $mainColor: pink;
     border: 1px solid #ebebeb;
     border-radius: 3px;
     font-size: 14px;
-    // height: 30px;
-    // width: 100px;
 }
 
 .people__card {
@@ -122,25 +120,9 @@ $mainColor: pink;
 }
 
 .basketUp {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ebebeb;
-    padding-bottom: 10px;
-    position: absolute;
-    background-color: #EBEBEB;
-    border-radius: 5px;
-}
-
-.emptyBasket {
-
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ebebeb;
-    padding: 5px;
-    position: absolute;
-    background-color: #EBEBEB;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
 }
 
 .del-btn {
@@ -572,6 +554,16 @@ $mainColor: pink;
     @include between();
     flex-wrap: wrap;
     margin-bottom: 96px;
+}
+
+.cart-block {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    color: black;
 }
 
 .category__item:not(:last-child) {
@@ -1184,6 +1176,10 @@ $mainColor: pink;
 }
 
 @media (max-width: 767px) {
+    .header__logo {
+        margin-left: 33px;
+    }
+
     .container {
         max-width: 375px;
         margin: auto;
@@ -1238,5 +1234,9 @@ $mainColor: pink;
 
     .catalog__content:nth-child(odd) {
         margin-right: 0;
+    }
+
+    .subscribe__email {
+        width: 230px;
     }
 }

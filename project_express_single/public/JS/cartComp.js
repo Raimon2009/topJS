@@ -50,8 +50,8 @@ Vue.component('cart', {
                     <span >{{ counter }}</span>                                
                 </span>                                                                       
             </div>     
-            <div v-show="showCart">
-                <p class="emptyBasket" v-if="!cartItems.length">Корзина пуста</p>
+            <div class="cart-block" v-show="showCart">
+                <p v-if="!cartItems.length">Корзина пуста</p>
                 <basket-up ref="basket-up"  v-for="item of cartItems" :key="item.id_product" :cartItem="item"></basket-up>
             </div> 
         </div>  
@@ -60,20 +60,18 @@ Vue.component('cart', {
 
 Vue.component('basket-up', {
     props: ['cartItem'],
-    template: `
-        <div>    
-            < div class="basketUp">
+    template: `            
+            <div class="basketUp">
                 <div>
-                    <span>Наименование:{{cartItem.product_name}}</span>
+                    <span>Наименование: {{cartItem.product_name}}</span>
                 </div>
                 <div>
-                    <span>Количество:{{cartItem.quantity}}</span> шт.
+                    <span>Количество: {{cartItem.quantity}}</span> шт.
                 </div>
-                <div>Цена:{{cartItem.price}}</div>
+                <div>Цена: {{cartItem.price}} $</div>
                 <div>
-                    <span>Общая стоимость:{{cartItem.quantity*cartItem.price}}</span>
+                    <span>Общая стоимость: {{cartItem.quantity*cartItem.price}} $</span>
                 </div>
-            </div>
-        </div>
+            </div>        
     `
 });
